@@ -1,0 +1,64 @@
+Testing using Postman:
+
+---------CREATE---------
+POST url: localhost:8080/addStudent
+Input: 
+{
+    "studentName": "Navneet",
+    "studentSubject": "Chemistry"
+}
+IDs are auto generated.(Here 164)
+
+---------READ---------
+GET url: localhost:8080/getAllStudent
+Output:
+[
+    {
+        "studentID": 101,
+        "studentName": "Nikhil",
+        "studentSubject": "Biology"
+    },
+    {
+        "studentID": 102,
+        "studentName": "Mehul",
+        "studentSubject": "Maths"
+    },
+    {
+        "studentID": 103,
+        "studentName": "Mrinal",
+        "studentSubject": "Hindi"
+    }
+]
+GET url: localhost:8080/getStudentByID/102
+Output:
+{
+    "studentID": 102,
+    "studentName": "Mehul",
+    "studentSubject": "Maths"
+}
+
+
+---------UPDATE---------
+POST url: localhost:8080/updateStudent
+Input:
+{
+    "studentID" : 101,
+    "studentName": "Nikhil R",
+    "studentSubject": "Physics"
+}
+Updating Record on the basis of ID.
+
+---------DELETE---------
+POST url: localhost:8080/deleteStudent
+Input:
+{
+    "studentID": 164
+}
+
+Final Records:
+
+STUDENT_ID STUDENT_NAME         STUDENT_SUBJECT
+---------- -------------------- --------------------
+       101 Nikhil R             Physics
+       102 Mehul                Maths
+       103 Mrinal               Hindi

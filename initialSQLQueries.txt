@@ -1,0 +1,24 @@
+create table student(
+    STUDENT_ID number(3) not null,
+    STUDENT_NAME varchar2(20),
+    STUDENT_SUBJECT varchar2(20),
+    CONSTRAINT STUDENT_PRIMARY_KEY PRIMARY KEY (STUDENT_ID)
+);
+
+insert into student values(101,'Nikhil','Biology');
+insert into student values(102,'Mehul','Maths');
+insert into student values(103,'Mrinal','Civics');
+
+SQL> select * from student;
+
+STUDENT_ID STUDENT_NAME         STUDENT_SUBJECT
+---------- -------------------- --------------------
+       101 Nikhil               Biology
+       102 Mehul                Maths
+       103 Mrinal               Civics
+
+SQL> commit;
+
+Commit complete.
+
+
